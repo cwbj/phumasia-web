@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Open+Sans:ital,wght@1,300&display=swap');
+*{
+	max-width: 1024px;
+	margin: auto;
+	padding: 0;
+	font-family: 'Trirong', serif;
+}
+header{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.epu-cover{
+	height: 500px;
+	position: relative;
+}
+.epu-cover img{
+	width: 100%;
+	height: 100%;
+	animation: slideall ease 3s forwards;
+	transform: translateY(100px);
+	opacity: 0;
+}
+.epu-cover .color-translate{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	top: 0;
+	position: absolute;
+	opacity: 0.7;
+	z-index: 1;
+}
+.epu-article{
+	position: absolute;
+	width: 60%;
+	margin: auto;
+	height: 100%;
+	z-index: 2;
+	top: 30%;
+	color: #B8B8B8;
+	left: 20px;
+}
+.epu-article h1{
+	color: black;
+	background-color: #e1dcdc;
+	border-radius: 5px;
+	text-align: center;
+	animation: slideall ease 4s forwards;
+	transform: translateX(-200px);
+	opacity: 0;
+}
+.epu-article p{
+	line-height: 45px;
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	animation: slideall ease 4s forwards;
+	transform: translateX(-200px);
+	opacity: 0;
+	background-color: rgba(0, 0, 255, 0.24);
+}
+@media screen and (max-width: 980px){
+	.epu-article{
+	z-index: 2;
+	top: 1%;
+	left: 5px;
+	height: auto;
+}
+.epu-article h1{
+	background-color: #e1dcdc67;
+	text-align: justify;
+}
+}
+@media screen and (max-width: 480px){
+	.epu-article p{
+	line-height: 35px;
+	font-weight: 600;
+	font-size: 1rem;
+	text-align: left;
+}
+.epu-article h1{
+	background-color: #e1dcdc67;
+	text-align: justify;
+	font-size: 20px;
+}
+.epu-cover{
+	height: 300px;
+	position: relative;
+}
+}
+@media screen and (max-width: 370px){
+	.epu-cover{
+		height: 280px;
+		position: relative;
+	}
+}
+
+
+header .introduction-epu{
+	margin: auto;
+	font-size: 25px;
+	margin-top: 2%;
+	text-align: center;
+}
+.introduction-epu p{
+	text-indent: 20px;
+	line-height: 45px;
+	animation: slideall ease 5s forwards;
+	transform: rotateY(120deg)
+}
+@media screen and (max-width: 425px){
+	.introduction-epu p{
+		line-height: 35px;
+		font-weight: 600;
+		font-size: 1rem;
+		text-align: left;
+	}
+
+}
+@keyframes slideall{
+	to{
+		transform: translateY(0);
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes slideall{
+	to{
+		transform: translateY(0);
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@-moz-keyframes slideall{
+	to{
+		transform: translateY(0);
+		transform: translateX(0);
+		opacity: 1;
+		transform: rotateY(0);
+	}
+}
+
+header .epu-fexd-bck{
+  height: 300px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  margin-top: 2%;
+}
+.epu-fexd-bck .imgbackgroun{
+	height: 100%;
+	width: 100%;
+	background-image: url(../photo/entreprenuer/computer.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	opacity: 0.2;
+}
+.epu-fexd-bck .fex-article{
+	position: absolute;
+	top: 25%;
+}
+.fex-article p{
+	font-size: 25px;
+	color: white;
+	line-height: 45px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-indent: 10px;
+}
+.fex-article img{
+	float: left;
+}
+@media screen and (max-width: 770px){
+	.epu-fexd-bck .fex-article{
+		top: 1%;
+	}
+}
+@media screen and (max-width: 600px){
+	.fex-article p{
+		font-size: 20px;
+		letter-spacing: 0;
+		line-height: 35px;
+	}
+}
+@media screen and (max-width: 400px){
+	.fex-article p{
+		font-size: 20px;
+		letter-spacing: 0;
+		line-height: 35px;
+		top: 30px;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+	.fex-article img{
+		float: none;
+	}
+	.epu-fexd-bck .fex-article{
+		position: absolute;
+		top: 10%;
+		height: 50%;
+	}
+
+}
+
+/* contant card section */
+.first-contant-section{
+	width: 100%;
+	margin-top: 5%;
+	padding-bottom: 10px;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: aqua;
+}
+.first-contant-section p{
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+}
+.first-contant-section .contant-card{
+	width: 450px;
+}
+.container-small{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.contant-card img{
+	width: 100%;
+	height: 100%;
+}
+.first-contant-section .contant-card-small{
+	width: 250px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.contant-card-small img{
+	width: 100%;
+	height: 100%;
+}
+.contant-card-small p{
+	padding-top: 20px;
+	margin-left: 10px;
+
+}
+@media screen and (max-width: 980px) {
+	.container-small{
+		display: inline-block;
+	}
+	.first-contant-section{
+		height: auto;
+		}
+}
+
+@media screen and (max-width: 690px) {
+	.container-small{
+		display: inline-block;
+	}
+	.first-contant-section{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 450px) {
+	.first-contant-section .contant-card{
+		width: 350px;
+		height: 100%;
+		border: 1px solid red;
+	}
+}
+@media screen and (max-width: 350px) {
+	.first-contant-section .contant-card{
+		width: 250px;
+		height: 100%;
+		border: 1px solid red;
+	}
+}
+
+
+
+.sectsointwo{
+	background-image: url(../photo/entreprenuer/cover.jpg);
+	height: 350px;
+	width: 100%;
+	background-position:left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+	margin-top: 2%;
+}
+.sectsointwo .sectiontwo-article{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.726);
+}
+.sectiontwo-article p{
+	width: 90%;
+	line-height: 40px;
+	padding-top: 20px;
+	font-size: 25px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+.sectsointwo .face-container{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 60%;
+	margin: auto;
+}
+.sectsointwo .teacherface{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+}
+.sectsointwo:hover .face-container{
+	animation: slideall ease-in-out 3s forwards;
+	transform: translateY(-100px);
+	opacity: 0;
+}

@@ -1,0 +1,359 @@
+
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    /*===== Colores =====*/
+    /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+    /* HSL color mode */
+    --hue-color: 224;
+    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    --font-formoble: 1.5rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
+  }
+  html{
+      scroll-behavior: smooth;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+}
+
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+  }
+  @media screen and (min-width: 992px) {
+    .bd-grid {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .home {
+      height: 500px;
+      width: 100%;
+      position: relative;
+      background-image: url(../photo/dacepictures/topagecover.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: -50px;
+      background-position-x: 5rem;
+      background-attachment: fixed;
+  }
+  .the-article h1,p{
+      width: 40%;
+      font-size: var(--big-font-size);
+      z-index: 4;
+      text-align: center;
+      color: orange;
+      margin-top: 2rem;
+      transform: translateY(-5rem);
+      opacity: 0;
+      animation: slide ease-in 2s forwards;
+  }
+  .the-article p{
+      font-size: var(--normal-font-size);
+  }
+  @media screen and (max-width: 1200px){
+    .bd-grid {
+        width: 100%;
+        display: grid;
+        margin: 0;
+      }
+      .home {
+        height: 500px;
+        background-position-x: 0;
+        margin: 0;
+    }
+    .pointer {
+        margin: 0;
+      }
+  }
+  @media screen and (max-width: 768px) {
+    .home {
+        height: 450px;
+        width: 100%;
+        position: relative;
+        background-image: url(../photo/dacepictures/topagecover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+  }
+  .home .the-article{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: rgba(7, 7, 7, 0.459);
+      z-index: 1;
+  }
+  .pointer {
+    position: absolute;
+    bottom: 0;
+    background: red;
+    z-index: 2;
+  }
+  .pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  ul{
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+li{
+    padding: 1.5rem 2rem;
+    background-color: blue;
+    list-style: none;
+}
+li a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: white;
+    font-weight: var(--font-semi);
+}
+
+.slide{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   margin-top: 2rem;
+}
+.slide img{
+    opacity: 0;
+    animation: slide ease 8s forwards;
+}
+.slide .slid-time{
+    display: inline-flex;
+    overflow: hidden;
+}
+.slide .tittile {
+    justify-content: center;
+    align-items: center;
+}
+.slide .tittile p{
+    color: black;
+    font-size: var(1.5);
+}
+@media screen and (max-width: 470px) {
+    .slide{
+        display: inline-block;
+        
+    }
+}
+@keyframes slide {
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes slide {
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+@-moz-keyframes slide {
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+
+
+        /*-------------------------- */
+        /*         Idrouse mr de     */
+        /*-------------------------- */
+        .indrouse-container{
+            position: relative;
+            height: 300px;
+            margin-top: 2rem;
+        }
+.indrousMr h1{
+    padding-top: 3rem;
+    font-size: var(--big-font-size);
+    text-align: center;
+    }
+        .indrouse-container .backgroun-blur{
+            background-image: url(../photo/dacepictures/indro-background.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            filter: blur(3px);
+        }
+        .indrouse-container .conatn-item{
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.555);
+            width: 100%;
+            height: 100%;
+        }
+        .indrousMr  h3{
+            border-bottom: 2px solid white;
+            width: 60%;
+            font-size: var(--big-font-size);
+            color: white;
+        }
+        .indrousMr p{
+            text-align: right;
+            font-size: var(--font-formoble);
+            color: white;
+            width: 80%;
+            
+        }
+        .conatn-item img{
+            display: block;
+            margin: auto;
+            border-radius: 15px;
+            transition: all .4s;
+        }
+        .conatn-item img:hover{
+            transform: scale(1.3);
+        }
+
+    /* srey not section */
+    .sreynot-indro{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+    }
+    .sreynot-indro .article{
+        text-align: center;
+    }
+
+/* dace action section */
+.action{
+    margin: 2rem auto;
+    width: 100%;
+}
+.bd-grid h1{
+    text-align: center;
+    font-size: var(--big-font-size);
+    padding: 0;
+}
+.action .action-item{
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-formoble);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+}
+.action .action-item img{
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+    border-radius: 5px;
+}
+.action p{
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 45px;
+    z-index: 2;
+}
+.action img:hover{
+    transform: translateX(-15px);
+}
+.action p.activeanimation{
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: slide ease-in-out 4s forwards;
+}
+@media screen and (max-width: 570px){
+    .action p{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 450px){
+    .action .action-item{
+        grid-template-columns: 1fr;
+    }
+}
+
+.all-photo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 2rem;
+}
+.all-photo img{
+    transition: all .5s;
+}
+.all-photo img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+@media screen and (max-width: 670px){
+    .all-photo{
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
+.video{
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.videoitem{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 2rem;
+    column-gap: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.videoitem iframe{
+    border-radius: 15px;
+}
+.videoitem .acticle-section p{
+    width: 100%;
+    color: black;
+    font-size: 1.3rem;
+    padding-bottom: 30px;
+}

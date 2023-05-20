@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.cover-contan{
+    width: 80%;
+    margin: 0 auto;
+}
+.cover-contan img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+
+body{
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: black;
+}
+
+.container-header-contant{
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(172, 172, 172);
+    border-radius: 15px;
+}
+.container-header-contant p{
+    padding-top: 20px;
+    font-size: 20px;
+    margin: 0px 10px;
+    line-height: 40px;
+    text-align: justify;
+    font-family: 'Trirong', serif;
+
+}
+ .container-header-contant .ourplane-section{
+    
+}
+.ourplane-section h2{
+    font-size: 24px;
+    font-family: 'Cabin', sans-serif;
+    background-color: white;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.ourplane-photo-section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-bottom: 10px;
+}
+.ourplane-photo-section .img{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    display: block;
+    border: 2px solid black;
+    left: 10%;
+    cursor: pointer;
+}
+.img:hover img{
+    transform: scale(1.030);
+}
+
+.ourplane-photo-section .img img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.ourplane-photo-section .img .cover-affect{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    overflow: hidden;
+    opacity: 20%;
+    transition: all 0.5s;
+}
+.ourplane-photo-section .img:hover  .cover-affect{
+    left: 0;
+    opacity: 0%;
+}
+@media screen and (max-width: 999px) {
+    body{
+        width: 100%;
+    }
+    .ourplane-photo-section .img{
+     left: 2%;
+    }
+}
+@media screen and (max-width: 890px){
+    .ourplane-photo-section{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .ourplane-photo-section .img{
+        position: relative;
+        width: 300px;
+        height: 250px;
+        display: block;
+        border: 2px solid black;
+        left: 10%;
+        cursor: pointer;
+    }
+
+}
+@media screen and (max-width: 678px){
+    .ourplane-photo-section{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+    .ourplane-photo-section .img{
+        position: relative;
+        width: 80%;
+        height: 250px;  
+        margin:  auto;
+        left: 0;
+        display: block;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+}
+
+/* plane section secoun-thir*/
+.plane-section{
+    width: 100%;
+    background-color: rgb(210, 215, 218);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 10px rgb(9, 116, 255);
+    transition: all 0.6s;
+}
+.plane-section p{
+    padding-top: 20px;
+    font-size: 20px;
+    margin: 10px 10px;
+    text-align: justify;
+    font-family: 'EB Garamond', serif;
+
+}       
+#secoun{
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+#secoun img{
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.plane-section.thir{
+    background-color: beige;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.plane-section .plane-thir{
+    box-shadow: 1px 2px 10px blue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.plane-section .plane-thir-items{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transition: all 0.6s;
+}
+
+.plane-section .plane-thir-items:hover{
+    box-shadow: 3px 3px 15px black;
+    transform: scale(1.005);
+}
+.plane-section .plane-thir-items p{
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+}
+.plane-section .plane-thir-items img{
+    width: 100%;
+    height: 100%;
+}
+.plane-section .plane-thir-items .effact{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    opacity: 40%;
+    transition: all 0.6s;
+}
+.plane-section .plane-thir-items .effact:hover{
+    opacity: 0;
+}
+@media screen and (max-width: 999px) {
+    .plane-section .plane-thir{
+        box-shadow: 1px 2px 10px blue;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+@media screen and (max-width: 678px){
+    .plane-section .plane-thir{
+        box-shadow: 1px 2px 10px blue;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+    .plane-section  p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+.plane-section.four{
+    background-color: #796de2;
+    border-bottom-right-radius: 0;
+}
+.plane-section.four .plane-four{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.plane-section  .plane-four .plane-four-photo{
+    width: 100%;
+    padding-top: 10px;
+
+}
+.plane-section.four .plane-four-photo img{
+   width: 100%;
+}
+.plane-section.four  p{
+    padding-top: 20px;
+    color: white;
+    margin: 10px 10px;
+    font-size: 20px;
+}
+@media screen and (max-width: 678px){
+    .plane-section.four .plane-four{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.stay-section{
+     background-color: #796de2;
+    padding-bottom: 20px;
+}
+.stay-section h3{
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+}
+.stay-section .paragraph-botton{
+    width: 50%;
+    margin: 10px auto;
+}
+.stay-section .paragraph-botton p{
+    line-height: 40px;
+    font-size: 20px;
+    text-align: justify;
+}
+.stay-section .paragraph-botton a{
+
+    padding: 10px;
+    text-decoration: none;
+    background-color: azure;
+    border-radius: 5px;
+    color: blue;
+    transition: all 0.3s;
+}
+.stay-section .paragraph-botton a:hover{
+    box-shadow: 1px 2px 10px blue;
+    opacity: 50%;
+}
+

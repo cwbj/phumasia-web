@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+:root{
+    --font-moble: 1.3rem;
+    --font-computer: 1.5rem;
+}
+body{
+    font-family: 'Trirong', serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.broducts-contianer{
+     max-width: 1024px;
+     background-color: rgb(228, 214, 188);
+     text-align: center;
+     margin: 0;
+}
+.broducts-contianer .card-container{
+   margin-top: 2rem;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   row-gap: var(--font-moble);
+   column-gap: 5px;
+   margin: 0 10px;
+}
+.broducts-contianer .card-container h2{
+    font-size: 1.3rem;
+}
+.broducts-contianer .card-container p{
+    font-size: 1rem;
+    padding-top: 10px;
+    color: orange;
+}
+.broducts-contianer .card-container img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 280px) {
+    .broducts-contianer h1,h2{
+        font-size: 1.2rem;
+   }
+}
+@media screen and (max-width: 470px) {
+    .broducts-contianer{
+        width: 100%;    
+        margin: auto;
+   }
+   .broducts-contianer .card-container{
+    grid-template-columns: repeat(3, 1fr);
+ }
+ .acticle h2{
+    font-size: 1rem;
+}
+}
+@media screen and (max-width: 320px) {
+    .broducts-contianer{
+        width: 100%;    
+        margin: 0;
+   }
+   .broducts-contianer .card-container{
+    grid-template-columns: auto auto;
+ }
+ .acticle h2{
+     font-size: 1.3rem;
+ }
+}
+
+@media screen and (min-width: 1024px){
+    .broducts-contianer{
+       margin: 0 auto;
+   }
+}
+
+.bd-grid{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+.introduction-cotrol{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 1rem;
+}
+
+/* medea qury section */
+@media screen and (max-width: 800px) {
+    .introduction-cotrol{
+        display: inline;
+        width: 100%;
+    }
+    .introduction-cotrol img{
+        width: 300px;
+        display: block;
+        margin: auto;
+    }
+   .article-iput .khmer{
+       font-size: medium;
+   }
+   @media screen and (max-width: 320px) {
+    .introduction-cotrol img{
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+    .article-iput .english{
+        font-size: 1rem;
+    }
+   }
+}
+
+/*===============================*/
+/*   conatact section  and mape   */
+/*================================*/
+.cotactin{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2.5rem;
+    position: relative;
+}
+.cotactin .cotact-item {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cotactin .cotact-item i{
+    background-color: orange;
+    padding: 10px;
+    color: #f2f2f2;
+    border-radius: 50%;
+}
+
+.cotactin .cotact-item i{
+    background-color: orange;
+    padding: 10px;
+    color: #f2f2f2;
+    border-radius: 50%;
+}
+.cotactin .cotact-item span {
+    padding-right: 5px;
+}
+@media screen and (max-width: 450px) {
+    .cotactin{
+        display: inline;
+        width: 80%;
+    }
+}
+
+
+/*        message section        */
+
+.message-section{
+    margin-top: 4rem;
+    width: 100%;
+    height: 450px;
+    background-color: green;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    padding-bottom: 10px;
+} 
+.message-section .contact-form label{
+    color: white;
+}
+.message-section .contact-form input[type="text"], textarea{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-size: var(--font-moble);
+    background-color: green;
+    border-radius: 0;
+}
+.message-section .button{
+    bottom: 1rem;
+    background-color: blue;
+    font-size: var(--font-moble);
+}
+.message-section .button:active{
+    background-color: green;
+}
+.message-section .slide-item{
+    opacity: 0;
+    animation: slid ease 3s forwards;
+}
+
+@keyframes slid{
+    to{
+        opacity: 1;
+    }
+}
+@-moz-keyframes slid{
+    to{
+        opacity: 1;
+    }
+}@-webkit-keyframes slid{
+    to{
+        opacity: 1;
+    }
+}
+
+/* @medea qery section */
+@media screen and (max-width: 470px) {
+    .message-section{
+        margin-top: 4rem;
+        width: 100%;
+        height: 450px;
+        background-color: green;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        padding-bottom: 10px;
+    }
+    .contact-form{
+        position: absolute;
+    }
+    .message{
+        z-index: 5;
+    }
+     .slide{
+        z-index: 1;
+        height: 100%;
+    }
+    .message-section .contact-form input[type="text"], textarea{
+        background-color: rgba(0, 128, 0, 0);
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-section{
+    width: 85%;
+    background-color: #ffffff;
+    margin: auto;
+}
+.product-section .product-control{
+    width: 100%;
+    margin: auto;
+}
+.product-section .product-control .title-contact-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin: 25px  auto;
+}
+.title-contact-section .contact-by i{
+    font-size: 25px;
+    margin-right: 20px;
+    color: #2aa6ee;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+.title-contact-section .title img,span{
+	transform: translateY(100px);
+	opacity: 0;
+	animation: imganimation ease 3s forwards;
+}
+@keyframes imganimation{
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes imganimation{
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-moz-keyframes imganimation{
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.contact-by span {
+    font-family: 'Trirong', serif;
+    font-weight: 500;
+}
+.product-section .product-control .title-contact-section h2{
+   letter-spacing: 2px;
+   font-weight: 600;
+   padding-bottom: 10px;
+   padding-top: 10px;
+}
+.product-section .product-control .title-contact-section p{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 992px){
+    .product-section .product-control .title-contact-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/*=================================title on header 
+                                                =========================starting form*/
+
+                                                /* Style inputs with type="text", select elements and textareas */
+                                                input[type=text], select, textarea {
+                                                    width: 100%; /* Full width */
+                                                    padding: 15px 10px; /* Some padding */ 
+                                                    outline: 0;
+                                                    border: 2px solid #2aa6ee;
+                                                    border-radius: 4px; /* Rounded borders */
+                                                    box-sizing: border-box; /* Make sure that padding and width stays in place */
+                                                    margin-top: 3px; /* Add a top margin */
+                                                    margin-bottom: 5px; /* Bottom margin */
+                                                    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+                                                }
+                                                
+                                                /* Style the submit button with a specific background color etc */
+                                                button{
+                                                    background-color: #717473;
+                                                    color: white;
+                                                    padding: 10px 15px;
+                                                    border: none;
+                                                    font-size: 18px;
+                                                    border-radius: 4px;
+                                                    cursor: pointer;
+                                                }
+                                                form label{
+                                                    color: rgb(19, 233, 162);
+                                                }
+                                                
+                                                /* When moving the mouse over the submit button, add a darker green color */
+                                                button:active{
+                                                    background-color: #07ff28;
+                                                    transform: scale(1.020);
+                                                    margin-bottom: 10px;
+                                                }
+
+                                                /* Add a background color and some padding around the form */
+                                                .container {
+                                                    border-radius: 5px;
+                                                    background-color: #f2f2f2;
+                                                }
+
+                                                        /*=================================ending form
+=========================starting product-cards*/
+
+.product-section  .product-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px  auto;
+    
+}
+.product-section .card{
+        width:100%;
+        box-shadow: 1px 2px 10px rgb(98, 98, 207);
+        position: relative;
+}
+
+.product-section  .card img{
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: all 0.5s;
+
+}
+.product-section .card img:hover{
+    transform: scale(1.020);
+    opacity: 80%;
+}
+ .card .photo-card .contant-card{
+    padding: 30px 0;
+    background-color: #2aa6ee;
+
+}
+ .card .photo-card .contant-card h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(190, 96, 9, 0.692);
+    text-shadow: 1px 0px 2px black;
+    text-align: center;
+
+}
+ .card .photo-card .contant-card p{
+    position: absolute;
+    right: 20px;
+    padding: 5px 0;
+}
+
+@media screen and (max-width: 992px){
+    .product-section  .product-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media screen and (max-width: 500px){
+    .product-section  .product-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+
+/*=================================ending
+                                                        =========================starting nhev infor*/
+
+
+                                                            .shev-introduction{
+                                                                width: 85%;
+                                                                margin: 0 auto;  
+                                                                position: relative;
+                                                            }
+                                                            .shev-introduction .she-face{
+                                                                position: relative;
+                                                                background-image: url(../procuct-picturs/all-products.jpg);
+                                                                background-repeat: no-repeat;
+                                                                background-position: center;
+                                                                background-size: cover;
+                                                                background-attachment: fixed;
+                                                            }
+                                                            .shev-introduction .she-face img{
+                                                                float: left;
+                                                            }
+                                                            .shev-introduction .she-face p{
+                                                                font-size: 20px;
+                                                                line-height: 40px;
+                                                                text-align: justify;
+                                                                margin: 0 10px;
+                                                                font-weight: 500px;
+                                                                background-color: rgba(0, 0, 0, 0.473);
+                                                                color: white;
+                                                            }
+                                                            .shev-introduction .she-face a{
+                                                                padding: 10px;
+                                                                background-color: violet;
+                                                                text-decoration: none;
+                                                                border-radius: 10px;
+                                                                color: white;
+                                                            }
+                                                            .she-face a:active{
+                                                                box-shadow: inset 2px 1px 15px black;
+                                                                -webkit-box-shadow: inset 2px 1px 15px black;
+                                                                -moz-box-shadow: inset 2px 1px 15px black;
+                                                                background-color: blue;
+                                                                opacity: 10%;
+                                                            }
+                                                            .she-face img:hover{
+                                                                transform: rotateY(160deg);
+                                                            }
+                                                            @media screen and (max-width: 500px) {
+																.shev-introduction{
+                                                                width: 100%;
+                                                           		 }
+                                                                .shev-introduction .she-face img{
+                                                                    float: none;
+                                                                    width: 300px;
+                                                                    height: 150px;
+                                                                }
+                                                            }
+                                                            @media screen and (max-width: 350px) {
+                                                                .shev-introduction .she-face img{
+                                                                    float: left;
+                                                                    width: 200px;
+                                                                    height: 150px;
+                                                                }
+                                                            }
+
+/* ==================== ending ========================
+
+                                     ====================starting nhev products ========================*/
+                                     .nhev-product-section{
+                                         width: 85%;
+                                         margin: 10px auto;
+                                     }
+                                     .nhev-product-section .item-control{
+                                         display: grid;
+                                         grid-template-columns: repeat(3, 1fr);
+                                     }
+                                    .product-card{
+                                         width: 100%;
+                                     }
+                                     .product-card .paragraph{
+                                         font-size: 18px;
+                                         font-weight: 500;
+                                         padding: 20px;
+                                     }
+                                     .product-card img{
+                                         width: 100%;
+                                         height: 100%;
+                                     }
+                                     .product-card .paragraph p{
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        padding: 20px;
+                                        padding-top: 10px;
+                                    }
+                                    @media screen and (max-width: 699px) {
+                                        .nhev-product-section .item-control{
+                                            display: grid;
+                                            grid-template-columns: repeat(2, 1fr);
+                                        }
+                                        .product-card .paragraph p,h3{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                    @media screen and (max-width: 320px) {
+                                        .nhev-product-section .item-control{
+                                            display: grid;
+                                            grid-template-columns: repeat(1, 1fr);
+                                        }
+                                        .product-card .paragraph p,h3{
+                                            font-size: 1.5rem;
+                                        }
+                                    }
+                  /* ==================== ending ========================
+====================foodter section ========================*/
